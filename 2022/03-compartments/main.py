@@ -1,4 +1,5 @@
-p = lambda x: ord(x) - (38 if ord("A") <= ord(x) <= ord("Z") else 96)
+def p(x):
+    return ord(x) - (38 if ord("A") <= ord(x) <= ord("Z") else 96)
 with open("input.txt") as f:
     print(sum(p((set(l[len(l)//2:]) & set(l[:len(l)//2])).pop()) for l in f.readlines()))
 with open("input.txt") as f:

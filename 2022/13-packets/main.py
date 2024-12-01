@@ -38,7 +38,7 @@ def problem_1(filename):
 
             try:
                 next(file)
-            except Exception as exc:
+            except Exception:
                 break
     return sum
 

@@ -19,7 +19,7 @@ def main():
     matrix = np.triu(y, k=1) - np.triu(y, k=N + 1)
 
     for i in range(N, array.shape[0]):
-        if not array[i] in matrix:
+        if array[i] not in matrix:
             contiguous_number = array[i]
             print("contiguous number: ", contiguous_number)
             break
