@@ -11,7 +11,7 @@ def solve1(data):
 def solve2(data):
     hm = {}
     for v in [x[1] for x in data]:
-        hm[v] = 1 if v not in hm else hm[v] + 1
+        hm[v] = hm.get(v, 0) + 1
 
     return sum((hm[v] if v in hm else 0) * v for v in [x[0] for x in data])
 
